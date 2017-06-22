@@ -5,16 +5,24 @@
     <title>Front End Assessment</title>
     <link rel="stylesheet" href="./styles/app.css">
 </head>
-<body>
+<body ng-controller="shopCtrl">
+   <!--<p>{{test}}</p>-->
+
+
 <!--This div wraps the entire page-->
     <div class="site-wrapper">
         <!--Here is your header with the navigation nested inside -->
         <header class="site-header" role="banner">
             <div class="container">
               <!--Insert Logo directive here -->
+            <logo></logo>
+
                 <nav class="site-nav">
                     <ul class="primary-nav">
-                        <!-- Navs go here -->
+                       <li><a ui-sref='home'>Home</a></li>
+                       <li><a ui-sref='about'>About</a></li>
+                       <li><a ui-sref='blog'>Blog</a></li>
+                       <li><a ui-sref='shop'>Shop</a></li>
                     </ul>
                 </nav>
                 <button class="hamburger toggle-nav js-toggle-nav" ng-click="showNav">
@@ -28,7 +36,7 @@
         <main class="site-main" role="main">
 
         <!--Views go here -->
-
+            <ui-view></ui-view>
         </main>
         </div>
 
@@ -36,6 +44,16 @@
 <!--ADD ALL YOUR SCRIPTS HERE -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+<script src="./js/app.js"></script>
+
+
+<script src="./js/shopCtrl.js"></script>
+<script src="./js/shopService.js"></script>
+<script src="./js/productDetailsCtrl.js"></script>
+<script src="./js/productTmpl.js"></script>
+<script src="./js/logo.js"></script>
+
+
 
 </body>
 </html>

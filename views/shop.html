@@ -3,9 +3,9 @@
         <p>Shop Page</p>
     </div>
 </section>
-<div class="product-grid__item   grid__item one-half large--one-third" >
+<div class="product-grid__item   grid__item one-half large--one-third" ng-repeat="product in products">
 
     <!--Repeat over your data and display it below -->
-
+    <product-tmpl product="product" show="true"></product-tmpl>
     
 </div>
